@@ -1,15 +1,6 @@
 import { useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
-
-const PRODUCTS = [
-  { id: 'tee-oversized', name: 'Oversized Street Tee', category: 'Shirts', price: 849, color: 'Black / White', image: 'https://images.unsplash.com/photo-1704410892064-a1cf957acf86?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxPdmVyc2l6ZWQlMjBTdHJlZXQlMjBUZWV8ZW58MHwwfHx8MTc2MjQ5NTY3Nnww&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80' },
-  { id: 'tee-signature', name: 'PRYZM Signature Tee', category: 'Shirts', price: 899, color: 'Emerald Green', image: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop' },
-  { id: 'hoodie-copper', name: 'Classic Copper Hoodie', category: 'Hoodies', price: 1899, color: 'Black / Copper', image: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop' },
-  { id: 'hoodie-emerald', name: 'Emerald Luxe Hoodie', category: 'Hoodies', price: 1999, color: 'Emerald Green', image: 'https://images.unsplash.com/photo-1704410892064-a1cf957acf86?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxPdmVyc2l6ZWQlMjBTdHJlZXQlMjBUZWV8ZW58MHwwfHx8MTc2MjQ5NTY3Nnww&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80' },
-  { id: 'cap', name: 'Minimal Copper Cap', category: 'Accessories', price: 599, color: 'Black / Copper', image: 'https://images.unsplash.com/photo-1534215754734-18e55d13e346?q=80&w=1200&auto=format&fit=crop' },
-];
-
-const CATEGORIES = ['All', 'Shirts', 'Hoodies', 'Accessories'];
+import { PRODUCTS, CATEGORIES } from './data';
 
 function formatINR(value) {
   return new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(value);
